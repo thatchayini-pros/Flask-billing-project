@@ -1,0 +1,138 @@
+<style>
+    body {
+        background-color: #fff8f0;
+        color: #3e2723;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .shop-title {
+        font-size: 36px;
+        text-align: center;
+        color: #4e342e;
+        margin-bottom: 10px;
+    }
+
+    .menu-section {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+
+    .menu-box {
+        width: 300px;
+        background-color: #fbe9e7;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .menu-box h3 {
+        text-align: center;
+        color: #bf360c;
+        margin-bottom: 10px;
+    }
+
+    .menu-box ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .menu-box ul li {
+        padding: 8px 0;
+        font-weight: 600;
+        font-size: 16px;
+        border-bottom: 1px dotted #d7a386;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #5d4037;
+    }
+
+    .price-tag {
+        background-color: #d81b60;
+        color: white;
+        font-weight: bold;
+        padding: 3px 8px;
+        border-radius: 12px;
+        font-size: 14px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        min-width: 45px;
+        text-align: center;
+    }
+
+    .center-btn {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .order-btn {
+        background-color: #6C3483;
+        color: white;
+        border: none;
+        padding: 15px 40px;
+        font-size: 20px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 5px 15px rgba(108, 52, 131, 0.4);
+    }
+
+    .order-btn:hover {
+        background-color: #512E5F;
+        box-shadow: 0 7px 20px rgba(81, 46, 95, 0.7);
+    }
+</style>
+ <h1 class="shop-title">☕ Brew & Beans Coffee Shop ☕</h1>
+<div class="menu-section">
+
+    <div class="menu-box">
+
+        <h3>Hot Drinks</h3>
+        <ul>
+            <li>Espresso <span class="price-tag">₹100</span></li>
+            <li>Cappuccino <span class="price-tag">₹150</span></li>
+            <li>Hot Chocolate <span class="price-tag">₹130</span></li>
+            <li>Americano <span class="price-tag">₹110</span></li>
+            <li>Flat White <span class="price-tag">₹160</span></li>
+            <li>Vanilla Latte <span class="price-tag">₹170</span></li>
+            <li>Caramel Macchiato <span class="price-tag">₹180</span></li>
+            <li>Turmeric Latte <span class="price-tag">₹175</span></li>
+        </ul>
+    </div>
+
+
+    <div class="menu-box">
+        <h3>Cold Drinks</h3>
+        <ul>
+            <li>Iced Coffee <span class="price-tag">₹120</span></li>
+            <li>Iced Latte <span class="price-tag">₹140</span></li>
+            <li>Cold Brew <span class="price-tag">₹150</span></li>
+            <li>Mocha Frappe <span class="price-tag">₹190</span></li>
+            <li>Caramel Iced Latte <span class="price-tag">₹180</span></li>
+            <li>Oreo Frappe <span class="price-tag">₹200</span></li>
+            <li>Vanilla Cold Foam <span class="price-tag">₹170</span></li>
+            <li>Choco Mint Cold Brew <span class="price-tag">₹185</span></li>
+        </ul>
+    </div>
+
+
+    <div class="menu-box">
+        <h3>Bakery Items</h3>
+        <ul>
+            <li>Croissant <span class="price-tag">₹80</span></li>
+            <li>Muffin <span class="price-tag">₹70</span></li>
+            <li>Donut <span class="price-tag">₹60</span></li>
+            <li>Chocolate Chip Cookie <span class="price-tag">₹90</span></li>
+            <li>Banana Bread <span class="price-tag">₹85</span></li>
+            <li>Cinnamon Roll <span class="price-tag">₹95</span></li>
+            <li>Cheese Danish <span class="price-tag">₹100</span></li>
+            <li>Butter Biscuit <span class="price-tag">₹65</span></li>
+        </ul>
+    </div>
+</div>
+
+<div class="center-btn">
+    <a href="/order"><button class="order-btn">Order Now!</button></a>
+</div>

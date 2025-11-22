@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm Your Order</title>
+    <style>
+        body {
+            background-color: #fff8e7;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            color: #4b2e05;
+        }
+        h1 {
+            color: #5e3615;
+        }
+        .btn {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            font-size: 16px;
+            margin: 10px;
+        }
+        .update-btn {
+            background-color: orange;
+        }
+        .confirm-btn {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Confirm Your Details</h1>
+
+    <form method="POST" action="{{ url_for('confirm') }}">
+        <p><strong>Name:</strong> {{ name }}</p>
+        <input type="hidden" name="name" value="{{ name }}">
+
+        <p><strong>Coffee:</strong> {{ coffee }}</p>
+        <input type="hidden" name="coffee" value="{{ coffee }}">
+
+        <p><strong>Quantity:</strong> {{ qty }}</p>
+        <input type="hidden" name="qty" value="{{ qty }}">
+
+        <p><strong>Bakery:</strong> {{ bakery }}</p>
+        <input type="hidden" name="bakery" value="{{ bakery }}">
+
+        <p><strong>Total:</strong> ₹{{ total }}</p>
+        <input type="hidden" name="total" value="{{ total }}">
+
+        <!-- 👇 Add these two -->
+        <input type="hidden" name="coffee_price" value="{{ coffee_price }}">
+        <input type="hidden" name="bakery_price" value="{{ bakery_price }}">
+
+        <button type="button" class="btn update-btn" onclick="window.history.back()">Update</button>
+        <button type="submit" class="btn confirm-btn">Confirm</button>
+    </form>
+</body>
+</html>

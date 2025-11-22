@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Order</title>
+</head>
+<body style="font-family:sans-serif; background:#fff3e0; text-align:center;">
+    <h1>Update Order</h1>
+    <form method="POST">
+        <label>Name:</label><br>
+        <input type="text" name="customer_name" value="{{ order[1] }}" required><br><br>
+
+        <label>Coffee:</label><br>
+        <input type="text" name="coffee" value="{{ order[2] }}" required><br><br>
+
+        <label>Quantity:</label><br>
+        <input type="number" name="quantity" value="{{ order[3] }}" required><br><br>
+
+        <label>Bakery:</label><br>
+        <input type="text" name="bakery" value="{{ order[4] }}"><br><br>
+
+        <label>Status:</label><br>
+        <select name="status">
+            <option value="Preparing" {% if order[6]=='Preparing' %}selected{% endif %}>Preparing</option>
+            <option value="Ready" {% if order[6]=='Ready' %}selected{% endif %}>Ready</option>
+            <option value="Delivered" {% if order[6]=='Delivered' %}selected{% endif %}>Delivered</option>
+        </select><br><br>
+
+        <button type="submit">Update Order</button>
+    </form>
+</body>
+</html>

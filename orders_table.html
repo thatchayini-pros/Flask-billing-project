@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orders List</title>
+    <style>
+        body { font-family: 'Segoe UI'; background-color: #fff8e1; text-align:center; }
+        table { margin:auto; border-collapse: collapse; width:80%; background:white; border-radius:10px; }
+        th, td { padding:12px; border-bottom:1px solid #ddd; }
+        th { background-color:#6d4c41; color:white; }
+        a.btn { padding:6px 10px; border-radius:5px; text-decoration:none; color:white; }
+        .update { background:#ff9800; }
+        .delete { background:#e53935; }
+        .bill { background:#43a047; }
+    </style>
+</head>
+<body>
+    <h1>☕ All Orders ☕</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Coffee</th>
+            <th>Qty</th>
+            <th>Bakery</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+        {% for o in orders %}
+        <tr>
+            <td>{{ o[0] }}</td>
+            <td>{{ o[1] }}</td>
+            <td>{{ o[2] }}</td>
+            <td>{{ o[3] }}</td>
+            <td>{{ o[4] if o[4] else '-' }}</td>
+            <td>₹{{ o[5] }}</td>
+            <td>{{ o[6] }}</td>
+            <td>
+                <a href="/update/{{ o[0] }}" class="btn update">Update</a>
+                <a href="/delete/{{ o[0] }}" class="btn delete">Delete</a>
+                <a href="/bill/{{ o[0] }}" class="btn bill">Bill</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br><a href="/" style="text-decoration:none; color:#6d4c41;">➕ Add New Order</a>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Page - Brew & Beans</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            background-color: #fff3e0;
+            font-family: 'Segoe UI', sans-serif;
+            color: #4e342e;
+        }
+
+        .order-container {
+            width: 90%;
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .shop-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #6d4c41;
+        }
+
+        h1.section-title {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 24px;
+            color: #4e342e;
+        }
+
+        form label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        form input,
+        form select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        .order-btn {
+            display: block;
+            width: 100%;
+            background-color: #6C3483;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            margin-top: 25px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .order-btn:hover {
+            background-color: #512E5F;
+        }
+
+        .coffee-image {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 180px;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="order-container">
+
+        <h1 class="shop-title">☕ Brew & Beans Coffee Shop ☕</h1>
+        <h1 class="section-title">Place Your Order</h1>
+
+        <img src="{{ url_for('static', filename='images/coffee.jpg') }}" alt="Coffee Image" class="coffee-image">
+
+        <form method="POST">
+
+            <label>Your Name:</label>
+            <input type="text" name="customer_name" placeholder="Enter your name" required>
+
+            <label>Select Coffee:</label>
+            <select name="coffee" required>
+                <option value="">-- Select Coffee --</option>
+                <optgroup label="Hot Drinks">
+                    <option value="Espresso">Espresso</option>
+                    <option value="Cappuccino">Cappuccino</option>
+                    <option value="Americano">Americano</option>
+                    <option value="Vanilla Latte">Vanilla Latte</option>
+                    <option value="Hot Chocolate">Hot Chocolate</option>
+                    <option value="Turmeric Latte">Turmeric Latte</option>
+                </optgroup>
+                <optgroup label="Cold Drinks">
+                    <option value="Iced Coffee">Iced Coffee</option>
+                    <option value="Cold Brew">Cold Brew</option>
+                    <option value="Iced Latte">Iced Latte</option>
+                    <option value="Mocha Frappe">Mocha Frappe</option>
+                    <option value="Caramel Iced Latte">Caramel Iced Latte</option>
+                    <option value="Oreo Frappe">Oreo Frappe</option>
+                </optgroup>
+            </select>
+
+            <label>Quantity:</label>
+            <input type="number" name="quantity" min="1" placeholder="Enter quantity" required>
+
+            <label>Select Bakery Item (Optional):</label>
+            <select name="bakery">
+                <option value="">-- Select Bakery Item --</option>
+                <option value="Croissant">Croissant</option>
+                <option value="Muffin">Muffin</option>
+                <option value="Donut">Donut</option>
+                <option value="Cinnamon Roll">Cinnamon Roll</option>
+                <option value="Butter Biscuit">Butter Biscuit</option>
+                <option value="Chocolate Chip Cookie">Chocolate Chip Cookie</option>
+            </select>
+
+            <button type="submit" class="order-btn">Confirm Order</button>
+        </form>
+    </div>
+</body>
+</html>

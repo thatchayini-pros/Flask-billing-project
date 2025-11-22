@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bill - Brew & Beans</title>
+    <style>
+        body {
+            background-color: #fff8e1;
+            font-family: 'Segoe UI', sans-serif;
+            color: #4e342e;
+            text-align: center;
+            padding: 40px;
+        }
+        .bill-box {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            display: inline-block;
+            text-align: left;
+        }
+        h1 {
+            text-align: center;
+            color: #6d4c41;
+        }
+        .total {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+    </style>
+</head>
+<body>
+    <div class="bill-box">
+        <h1>☕ Brew & Beans Bill ☕</h1>
+        <p><b>Customer Name:</b> {{ name }}</p>
+        <p><b>Coffee:</b> {{ coffee }}</p>
+        <p><b>Quantity:</b> {{ qty }}</p>
+        <p><b>Bakery Item:</b> {{ bakery if bakery else 'None' }}</p>
+        <hr>
+        <p class="total">Total Amount: ₹{{ total }}</p>
+        <hr>
+        <p>Thank you for ordering from Brew & Beans!</p>
+    </div>
+</body>
+</html>
